@@ -1,13 +1,34 @@
+import com.sun.source.tree.IfTree;
+
+import java.util.Objects;
 import java.util.Random;
-    public class Main {
+import java.util.Scanner;
+
+public class Main {
         public static void main(String[] args) {
-            System.out.println("Sie haben das Spiel angefangen");
+            System.out.println("Herzlich Willkommen zu Mastermind");
+            System.out.println("Kennen Sie das Spiel Mastermind? ");
+            System.out.println("Antworten Sie mit 'Ja' oder 'Nein' ");
+            String Ja = "Ja";
+
+            Scanner newScanner = new Scanner(System.in);
+            String Antwort = newScanner.nextLine();
+
+            if (Objects.equals(Antwort, Ja)) {
+                System.out.println("Sie haben das Spiel angefangen");
+            } else {
+                System.out.println("Ihre Aufgabe ist die Farben zu erraten. Insgesamt haben Sie 12 Versuche die 4 richtige Farben zu finden.");
+                System.out.println("Die mögliche Farben sind: Rot, Grün, Blau, Orange, Gelb, Weis, Grau und Rosa.");
+                System.out.println("Viel Glück!!");
+            }
+
+
+
+
             //Generiert Random Zahl und definiert 4 Variablen
 
-            System.out.println("Herzlich Willkommen zu Mastermind");
-            System.out.println("Ihre Aufgabe ist die Farben zu erraten. Insgesamt haben Sie 12 Versuche die 4 richtige Farben zu finden.");
-            System.out.println("Die mögliche Farben sind: Rot, Grün, Blau, Orange, Gelb, Weis, Grau und Rosa.");
-            System.out.println("Viel Glück!!");
+
+
 
             /*
             0 = Blau
