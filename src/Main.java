@@ -10,21 +10,27 @@ import java.util.Random;
             System.out.println("Viel Glück!!");
 
             /*
-            1 = Rot
-            2 = Grün
-            3 = Blau
-            4 = Orange
-            5 = Gelb
-            6 = Weis
-            7 = Grau
-            8 = Rosa
+            0 = Rot
+            1 = Grün
+            2 = Blau
+            3 = Orange
+            4 = Gelb
+            5 = Weis
+            6 = Grau
+            7 = Rosa
              */
+
+            //Generation Computer Farben
 
             int a = 0;
             int ab = 0;
             int abc = 0;
-            int abcd
+            int abcd = 0;
 
+            int farbe1_Com = 0;
+            int farbe2_Com = 0;
+            int farbe3_Com = 0;
+            int farbe4_Com = 0;
 
 
             for (int i = 0; i <= 4; i++) {
@@ -32,15 +38,19 @@ import java.util.Random;
                 int randomZahl = random.nextInt(8);
 
                 if (a == 0) {
-                    int Farbe1_Com = a;
+                     farbe1_Com = randomZahl;
                     ++a;
                 } else if (ab == 0) {
-                     int a2 = a;
+                      farbe2_Com = randomZahl;
                     ++ab;
                 } else if (abc == 0) {
-                    a3 = a;
+                     farbe3_Com = randomZahl;
                     ++abc;
+                } else if (abcd == 0) {
+                     farbe4_Com = randomZahl;
+                    ++abcd;
                 }
+                String[] Farben_Com;
             }
             }
         }
