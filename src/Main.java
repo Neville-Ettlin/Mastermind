@@ -1,8 +1,10 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("");
+import java.util.Random;
+    public class Main {
+        public static void main(String[] args) {
+            System.out.println("");
+            //Generiert Random Zahl und definiert 4 Variablen
 
+            Random random = new Random();
+            int randomZahl = random.nextInt(100);
+            }
         }
-    }
