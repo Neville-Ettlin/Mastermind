@@ -175,7 +175,7 @@ public class Main {
                     break;
 
                 default:
-                    System.out.println("error");
+                    System.out.println("errohr");
                     break;
             }
 
