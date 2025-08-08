@@ -50,7 +50,7 @@ import java.util.Random;
                      farbe4_Com = randomZahl;
                     ++abcd;
                 }
-                String[] Farben_Com;
+
             }
             }
         }
