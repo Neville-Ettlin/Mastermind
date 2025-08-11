@@ -26,21 +26,7 @@ public class Main {
 
 
 
-            //Generiert Random Zahl und definiert 4 Variablen
 
-
-
-
-            /*
-            0 = Blau
-            1 = Rot
-            2 = Grün
-            3 = Gelb
-            4 = Orange
-            5 = Violet
-             */
-
-            //Generation Computer Farben
 
             int a = 0;
             int ab = 0;
