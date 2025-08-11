@@ -1,8 +1,6 @@
 import com.sun.source.tree.IfTree;
 
-import java.util.Objects;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
         public static void main(String[] args) {
@@ -43,24 +41,28 @@ public class Main {
             String farbe3_Com = "";
             String farbe4_Com = "";
 
-            for (int i = 0; i <= 4; i++) {
-                Random random = new Random();
-                int randomZahl = random.nextInt(6);
+            Random rand = new Random();
+            Set<Integer> uniqueNumbers = new HashSet<>();
 
-                if (a == 0) {
-                    farbe1_Com_random = randomZahl;
-                    ++a;
-                } else if (ab == 0) {
-                    farbe2_Com_random = randomZahl;
-                    ++ab;
-                } else if (abc == 0) {
-                    farbe3_Com_random = randomZahl;
-                    ++abc;
-                } else if (abcd == 0) {
-                    farbe4_Com_random = randomZahl;
-                    ++abcd;
-                }
+            while (uniqueNumbers.size() < 4) {
+                int number = rand.nextInt(6); // Zahlenbereich: 0 bis 5
+                uniqueNumbers.add(number); // Duplikate werden automatisch ignoriert
             }
+            List<Integer> numberList = new ArrayList<>(uniqueNumbers);
+
+            // In Variablen speichern
+            int y = numberList.get(0);
+            int b = numberList.get(1);
+            int c = numberList.get(2);
+            int d = numberList.get(3);
+
+
+            farbe1_Com_random = y;
+            farbe2_Com_random = b;
+            farbe3_Com_random = c;
+            farbe4_Com_random = d;
+
+
 
             //Farb zuweisung Farbe1_Com
                 switch (farbe1_Com_random) {
@@ -166,6 +168,11 @@ public class Main {
                     break;
             }
 
+            System.out.println(farbe1_Com);
+            System.out.println(farbe2_Com);
+            System.out.println(farbe3_Com);
+            System.out.println(farbe4_Com);
+
 
             int versuche = 12;
 
@@ -254,7 +261,7 @@ public class Main {
                 }
 
                 if (FarbeRichtig == 0) {
-                    System.out.println("Alle Farben sind falsch oder haben falsche Position");
+                    System.out.println(" ");
                 } else if (FarbeRichtig == 1) {
                     System.out.println("Eine Farbe ist richtig");
                 } else if (FarbeRichtig == 2) {
@@ -290,6 +297,25 @@ public class Main {
                     System.out.println("Alle Farben haben falsche Position");
                 }
 
+            }
+
+            for (int i = 0; i <= 4; i++) {
+                Random random = new Random();
+                int randomZahl = random.nextInt(6);
+
+                if (a == 0) {
+                    farbe1_Com_random = randomZahl;
+                    ++a;
+                } else if (ab == 0) {
+                    farbe2_Com_random = randomZahl;
+                    ++ab;
+                } else if (abc == 0) {
+                    farbe3_Com_random = randomZahl;
+                    ++abc;
+                } else if (abcd == 0) {
+                    farbe4_Com_random = randomZahl;
+                    ++abcd;
+                }
             }
 
 
