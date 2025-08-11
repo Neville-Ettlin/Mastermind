@@ -168,11 +168,6 @@ public class Main {
                     break;
             }
 
-            System.out.println(farbe1_Com);
-            System.out.println(farbe2_Com);
-            System.out.println(farbe3_Com);
-            System.out.println(farbe4_Com);
-
 
             int versuche = 12;
 
