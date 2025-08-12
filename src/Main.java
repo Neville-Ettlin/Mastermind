@@ -15,7 +15,7 @@ public class Main {
         } else {
             System.out.println("Ihre Aufgabe ist die Farben zu erraten. Insgesamt haben Sie 12 Versuche die 4 richtige Farben zu finden.");
         }
-        System.out.println("Die mögliche Farben sind: Blau, Rot, Grün, Gelb, Orange, Violet.");
+        System.out.println("Die mögliche Farben sind: Blau, Rot, Grün, Gelb, Orange, Violett.");
         System.out.println("Viel Glück!!");
 
         Random rand = new Random();
@@ -53,12 +53,19 @@ public class Main {
                     generiert[m] = "orange";
                     break;
                 case 5:
-                    generiert[m] = "violet";
+                    generiert[m] = "violett";
                     break;
             }
         }
         int versuche = 12;
         for (int i = 0; i <= 12; i++) {
+
+            if (i == 12) {
+                System.out.println("Die richtigen Farben waren:");
+                System.out.println(Arrays.toString(generiert));
+                System.exit(1);
+            }
+
             if (versuche == 1) {
                 System.out.println("Sie haben noch" + " " + versuche + " " + "Versuch");
             } else {
@@ -111,11 +118,7 @@ public class Main {
             System.out.println(FarbenPosition + " Farbe/n sind am falschen Ort");
             System.out.println(FarbenFalsch + " Farbe/n sind falsch");
 
-            if (i == 12) {
-                System.out.println("Die richtigen Farben waren:");
-                System.out.println(Arrays.toString(generiert));
-                System.exit(1);
-            }
+
         }
     }
 }
