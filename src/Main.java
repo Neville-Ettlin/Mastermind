@@ -1,6 +1,3 @@
-import com.sun.source.tree.IfTree;
-
-import java.lang.reflect.Array;
 import java.util.*;
 public class Main {
     public static void main(String[] args) {
@@ -72,41 +69,40 @@ public class Main {
                 System.out.println("Sie haben noch" + " " + versuche + " " + "Versuche");
                 versuche--;
             }
-            System.out.println(Arrays.toString(generiert));
+
             System.out.println("Geben Sie ihre Farben ein (Blau, Rot, etc.): ");
 
-            String[] userValue = new String[4];
+            String[] benutzer = new String[4];
 
             String input = newScanner.nextLine();
             String[] arrOfStr = input.split(", ");
 
             for (int o = 0; o <= 3; o++) {
                 for (String x : arrOfStr) {
-                    userValue[o] = x.toLowerCase() ;
+                    benutzer[o] = x.toLowerCase() ;
                     o++;
                 }
             }
 
             int FarbeRichtig = 0;
             int FarbenPosition = 0;
-            int FarbenFalsch = 0;
 
             for (int f = 0; f <= 3; f++) {
-                if (Objects.equals(userValue[f], generiert[f])) {
+                if (Objects.equals(benutzer[f], generiert[f])) {
                     FarbeRichtig++;
                 }
             }
 
             for (int t = 0; t <= 3; t++) {
                 for (int q = 0; q <= 3; q++) {
-                    if (Objects.equals(userValue[q], generiert[t])) {
+                    if (Objects.equals(benutzer[q], generiert[t])) {
                         FarbenPosition++;
                     }
                 }
             }
 
             FarbenPosition = FarbenPosition - FarbeRichtig;
-            FarbenFalsch = 4 - FarbenPosition - FarbeRichtig;
+            int FarbenFalsch = 4 - FarbenPosition - FarbeRichtig;
 
 
             if (FarbeRichtig == 4) {
@@ -117,8 +113,6 @@ public class Main {
             System.out.println(FarbeRichtig + " Farbe/n sind richtig");
             System.out.println(FarbenPosition + " Farbe/n sind am falschen Ort");
             System.out.println(FarbenFalsch + " Farbe/n sind falsch");
-
-
         }
     }
 }
