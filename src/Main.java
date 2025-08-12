@@ -38,22 +38,22 @@ public class Main {
 
             switch (random_list[m]) {
                 case 0:
-                    generiert[m] = "Blau";
+                    generiert[m] = "blau";
                     break;
                 case 1:
-                    generiert[m] = "Rot";
+                    generiert[m] = "rot";
                     break;
                 case 2:
-                    generiert[m] = "Grün";
+                    generiert[m] = "grün";
                     break;
                 case 3:
-                    generiert[m] = "Gelb";
+                    generiert[m] = "gelb";
                     break;
                 case 4:
-                    generiert[m] = "Orange";
+                    generiert[m] = "orange";
                     break;
                 case 5:
-                    generiert[m] = "Violet";
+                    generiert[m] = "violet";
                     break;
             }
         }
@@ -65,7 +65,7 @@ public class Main {
                 System.out.println("Sie haben noch" + " " + versuche + " " + "Versuche");
                 versuche--;
             }
-
+            System.out.println(Arrays.toString(generiert));
             System.out.println("Geben Sie ihre Farben ein (Blau, Rot, etc.): ");
 
             String[] userValue = new String[4];
